@@ -1,7 +1,7 @@
 var sL = 988;
 var sW = 630;
-var bL = 3;
-var rL = 3;
+var bL = 1;
+var rL = 1;
 var rup = true;
 var bup = true;
 var ren, bob, rpn, bpn;
@@ -210,12 +210,12 @@ function keyPressed() {
 function fire(w) {
   var po;
   if (w.dir == "E") {
-    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 15);
-    w.x -= 60;
+    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 25);
+    w.x -= 100;
   }
   if (w.dir == "W") {
-    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 15);
-    w.x += 60;
+    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 25);
+    w.x += 100;
   }
   if (w == bpn) {
     bPotatos.splice(bPotatos.length, 0, po);
