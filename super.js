@@ -192,19 +192,19 @@ function draw() {
         rf = false;
     }
   }
+  
+  if (keyIsDown(18))
+    if (!rf)
+      fire(rpn);
+  
+  if (keyIsDown(70))
+    if (!bf)
+      fire(bpn);
+  
   bob.show();
   ren.show();
   bpn.show();
   rpn.show();
-}
-
-function keyPressed() {
-  if(keyCode == 18)
-    if (!rf)
-      fire(rpn);
-  if(keyCode == 70)
-    if (!bf)
-      fire(bpn);
 }
 
 function fire(w) {
