@@ -53,10 +53,6 @@ function draw() {
   if (rL == 0)
     ren.r = 0;
   if (running) {
-    /*if (keyIsDown(191))
-      fire(rpn);
-    if(keyIsDown(69))
-      fire(bpn);*/
     
     if (keyIsDown(RIGHT_ARROW)) {
       ren.x += ren.speed;
@@ -203,10 +199,10 @@ function draw() {
 }
 
 function keyPressed() {
-  if(keyCode == 191)
+  if(keyCode == 18)
     if (!rf)
       fire(rpn);
-  if(keyCode == 69)
+  if(keyCode == 70)
     if (!bf)
       fire(bpn);
 }
