@@ -17,8 +17,8 @@ function setup() {
   createCanvas(sL, sW);
   bob = new Sprite(100, 100, 50, 50, 0, 0, 255, 4)
   ren = new Sprite(854, 482, 50, 50, 255, 0, 0, 4);
-  bpn = new iSprite(loadImage("Rose.png"), bob.x, bob.y, 50, 50, "E");
-  rpn = new iSprite(loadImage("Rose.png"), ren.x, ren.y, 50, 50, "W");
+  bpn = new iSprite(loadImage("Weapon.png"), bob.x, bob.y, 50, 50, "E");
+  rpn = new iSprite(loadImage("Weapon.png"), ren.x, ren.y, 50, 50, "W");
 }
 
 function draw() {
@@ -210,11 +210,11 @@ function keyPressed() {
 function fire(w) {
   var po;
   if (w.dir == "E") {
-    po = new iSprite(loadImage("Potato.png"), w.x + 25, w.y, 25, 25, w.dir, 5);
+    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 5);
     w.x -= 20;
   }
   if (w.dir == "W") {
-    po = new iSprite(loadImage("Potato.png"), w.x - 25, w.y, 25, 25, w.dir, 5);
+    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 5);
     w.x += 20;
   }
   if (w == bpn) {
