@@ -34,24 +34,6 @@ function draw() {
     fill(255, 0, 0)
     text("RED WINS!", sL / 2 - txtSize * 3, sW / 2)
   }
-  if (winner == "ren")
-  if (bL == 3)
-    bob.b = 255;
-  if (bL == 2)
-    bob.b = 170;
-  if (bL == 1)
-    bob.b = 85;
-  if (bL == 0)
-    bob.b = 0;
-
-  if (rL == 3)
-    ren.r = 255;
-  if (rL == 2)
-    ren.r = 170;
-  if (rL == 1)
-    ren.r = 85;
-  if (rL == 0)
-    ren.r = 0;
   if (running) {
     
     if (keyIsDown(RIGHT_ARROW)) {
