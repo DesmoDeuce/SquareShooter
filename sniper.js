@@ -35,10 +35,12 @@ function draw() {
     text("RED WINS!", sL / 2 - txtSize * 3, sW / 2)
   }
   
-  if (rl == 0)
+  if (rl == 0) {
     ren.r = 0
-  if (bl == 0)
+  }
+  if (bl == 0) {
     bob.b = 0
+  }
   
   if (running) {
     
