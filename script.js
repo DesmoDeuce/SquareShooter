@@ -41,8 +41,11 @@ function draw() {
     bob.b = 170;
   if (bL == 1)
     bob.b = 85;
-  if (bL == 0)
-    bob.b = 0;
+  if (bL == 0) {
+    bob.b = 100;
+    bob.r = 100;
+    bob.g = 100;
+  }
 
   if (rL == 3)
     ren.r = 255;
@@ -50,8 +53,11 @@ function draw() {
     ren.r = 170;
   if (rL == 1)
     ren.r = 85;
-  if (rL == 0)
-    ren.r = 0;
+  if (rL == 0) {
+    ren.b = 100;
+    ren.r = 100;
+    ren.g = 100;
+  }
   if (running) {
     
     if (keyIsDown(RIGHT_ARROW)) {
