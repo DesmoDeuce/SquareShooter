@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(100);
+  background(220);
   if (winner == "bob") {
     textSize(txtSize)
     fill(0, 0, 255)
@@ -42,9 +42,9 @@ function draw() {
   if (bL == 1)
     bob.b = 85;
   if (bL == 0) {
-    bob.b = 100;
-    bob.r = 100;
-    bob.g = 100;
+    bob.b = 220;
+    bob.r = 220;
+    bob.g = 220;
   }
 
   if (rL == 3)
@@ -54,9 +54,9 @@ function draw() {
   if (rL == 1)
     ren.r = 85;
   if (rL == 0) {
-    ren.b = 100;
-    ren.r = 100;
-    ren.g = 100;
+    ren.b = 220;
+    ren.r = 220;
+    ren.g = 220;
   }
   
   if (running) {
