@@ -17,8 +17,8 @@ function setup() {
   createCanvas(sL, sW);
   bob = new Sprite(100, 100, 50, 50, 0, 0, 255, 4)
   ren = new Sprite(854, 482, 50, 50, 255, 0, 0, 4);
-  bpn = new iSprite(loadImage("Weapon.png"), bob.x, bob.y, 50, 50, "E");
-  rpn = new iSprite(loadImage("Weapon.png"), ren.x, ren.y, 50, 50, "W");
+  bpn = new iSprite(loadImage("SniperWeapon.png"), bob.x, bob.y, 50, 50, "E");
+  rpn = new iSprite(loadImage("SniperWeapon.png"), ren.x, ren.y, 50, 50, "W");
 }
 
 function draw() {
@@ -101,7 +101,7 @@ function draw() {
   
       if (bPotatos[n].x + bPotatos[n].width >= ren.x && bPotatos[n].x + bPotatos[n].width <= ren.x + ren.width)
         if (bPotatos[n].y + bPotatos[n].length >= ren.y && bPotatos[n].y + bPotatos[n].length <= ren.y + ren.length) {
-          rL--;
+          rL -= 3;
           bPotatos[n].y = -50
           if (rL < 1) {
             winner = "bob";
@@ -123,7 +123,7 @@ function draw() {
   
       if (rPotatos[n].x + rPotatos[n].width >= bob.x && rPotatos[n].x + rPotatos[n].width <= bob.x + bob.width)
         if (rPotatos[n].y + rPotatos[n].length >= bob.y && rPotatos[n].y + rPotatos[n].length <= bob.y + bob.length) {
-          bL--;
+          bL -= 3;
           rPotatos[n].y = -50;
           if (bL < 1) {
             winner = "ren";
@@ -210,12 +210,12 @@ function keyPressed() {
 function fire(w) {
   var po;
   if (w.dir == "E") {
-    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 5);
-    w.x -= 20;
+    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 25);
+    w.x -= 100;
   }
   if (w.dir == "W") {
-    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 5);
-    w.x += 20;
+    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 25);
+    w.x += 100;
   }
   if (w == bpn) {
     bPotatos.splice(bPotatos.length, 0, po);
