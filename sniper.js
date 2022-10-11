@@ -57,7 +57,8 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
       ren.x += ren.speed;
       rpn.x += ren.speed;
-      rpn.dir = "E";
+      if (!rf)
+        rpn.dir = "E";
     }  
     if (keyIsDown(UP_ARROW)) {
       ren.y -= ren.speed;
@@ -66,7 +67,8 @@ function draw() {
     if (keyIsDown(LEFT_ARROW)) {
       ren.x -= ren.speed;
       rpn.x -= ren.speed;
-      rpn.dir = "W";
+      if (!rf)
+        rpn.dir = "W";
     }  
     if (keyIsDown(DOWN_ARROW)) {
       ren.y += ren.speed;
@@ -76,7 +78,8 @@ function draw() {
     if (keyIsDown(68)) {
       bob.x += bob.speed;
       bpn.x += bob.speed;
-      bpn.dir = "E";
+      if (!bf)
+        bpn.dir = "E";
     }  
     if (keyIsDown(87)) {
       bob.y -= bob.speed;
@@ -85,7 +88,8 @@ function draw() {
     if (keyIsDown(65)) {
       bob.x -= bob.speed;
       bpn.x -= bob.speed;
-      bpn.dir = "W";
+      if (!bf)
+        bpn.dir = "W";
     }  
     if (keyIsDown(83)) {
       bob.y += bob.speed;
