@@ -1,7 +1,7 @@
 var sL = 988;
 var sW = 630;
-var bL = 1;
-var rL = 1;
+var bL = 3;
+var rL = 3;
 var rup = true;
 var bup = true;
 var ren, bob, rpn, bpn;
@@ -34,14 +34,24 @@ function draw() {
     fill(255, 0, 0)
     text("RED WINS!", sL / 2 - txtSize * 3, sW / 2)
   }
-  
-  if (rl == 0) {
-    ren.r = 0
-  }
-  if (bl == 0) {
-    bob.b = 0
-  }
-  
+  if (winner == "ren")
+  if (bL == 3)
+    bob.b = 255;
+  if (bL == 2)
+    bob.b = 170;
+  if (bL == 1)
+    bob.b = 85;
+  if (bL == 0)
+    bob.b = 0;
+
+  if (rL == 3)
+    ren.r = 255;
+  if (rL == 2)
+    ren.r = 170;
+  if (rL == 1)
+    ren.r = 85;
+  if (rL == 0)
+    ren.r = 0;
   if (running) {
     
     if (keyIsDown(RIGHT_ARROW)) {
@@ -200,12 +210,12 @@ function keyPressed() {
 function fire(w) {
   var po;
   if (w.dir == "E") {
-    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 25);
-    w.x -= 100;
+    po = new iSprite(loadImage("Bullet.png"), w.x + 25, w.y, 25, 25, w.dir, 5);
+    w.x -= 20;
   }
   if (w.dir == "W") {
-    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 25);
-    w.x += 100;
+    po = new iSprite(loadImage("Bullet.png"), w.x - 25, w.y, 25, 25, w.dir, 5);
+    w.x += 20;
   }
   if (w == bpn) {
     bPotatos.splice(bPotatos.length, 0, po);
