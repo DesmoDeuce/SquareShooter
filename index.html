@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  </head>
+  <title>
+    Screensaver
+  </title>
+  <h1>Screensaver</h1>
+</html>
+<script>
+  var s;
+  var r = 0;
+  var g = 0;
+  var b = 0;
+  var ri = Math.floor(Math.random() * 6);
+  var gi = Math.floor(Math.random() * 6);
+  var bi = Math.floor(Math.random() * 6);
+  var sL = 1009;
+  var sW = 637;
+  var size = 200;
+  var up = true;
+  var dir = "SE";
+  var x = Math.floor(Math.random() * (sL - size + 1));
+  var y = Math.floor(Math.random() * (sW - size + 1));
+  var n = Math.floor(Math.random() * 4)
+  var spd = 1;
+  
+  function setup() {
+    createCanvas(sL, sW);
+    if (n == 0)
+      dir = "SE";
+    if (n == 1)
+      dir = "NE";
+    if (n == 2)
+      dir = "SW";
+    if (n == 3)
+      dir = "NW";
+  }
+  
+  function draw() {
+    background(220);
+    s = square(x, y, size);
+    s.fill(r, g, b);
+    s.noStroke();
+
+    if (x <= 0) {
+      if (dir == "NW")
+        dir = "NE";
+      if (dir == "SW")
+        dir = "SE";
+      ri = Math.floor(Math.random() * 6);
+      gi = Math.floor(Math.random() * 6);
+      bi = Math.floor(Math.random() * 6);
+    }
+    if (x + size >= sL) {
+      if (dir == "NE")
+        dir = "NW";
+      if (dir == "SE")
+        dir = "SW";
+      ri = Math.floor(Math.random() * 6);
+      gi = Math.floor(Math.random() * 6);
+      bi = Math.floor(Math.random() * 6);
+    }
+    if (y <= 0) {
+      if (dir == "NE")
+        dir = "SE";
+      if (dir == "NW")
+        dir = "SW";
+      ri = Math.floor(Math.random() * 6);
+      gi = Math.floor(Math.random() * 6);
+      bi = Math.floor(Math.random() * 6);
+    }
+    if (y + size >= sW) {
+      if (dir == "SE")
+        dir = "NE";
+      if (dir == "SW")
+        dir = "NW";
+      ri = Math.floor(Math.random() * 6);
+      gi = Math.floor(Math.random() * 6);
+      bi = Math.floor(Math.random() * 6);
+    }
+
+    if (up) {
+      if (r < 255)
+        r += ri;
+      if (g < 255)
+        g += gi;
+      if (b < 255)
+        b += bi;
+      if (r >= 255 && g >= 255 && b >= 255)
+        up = false;
+    }
+    else {
+      if (r > 0)
+        r -= ri;
+      if (g > 0)
+        g -= gi;
+      if (b > 0)
+        b -= bi;
+      if (r <= 0 && g <= 0 && b <= 0)
+        up = true;
+    }
+
+    if (dir == "SE") {
+      x += spd;
+      y += spd;
+    }
+    if (dir == "NE") {
+      x += spd;
+      y -= spd;
+    }
+    if (dir == "SW") {
+      x -= spd;
+      y += spd;
+    }
+    if (dir == "NW") {
+      x -= spd;
+      y -= spd;
+    }
+  }
+</script>
