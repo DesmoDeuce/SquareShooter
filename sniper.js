@@ -15,8 +15,8 @@ var txtSize = 64;
 
 function setup() {
   createCanvas(sL, sW);
-  bob = new Sprite(100, 100, 50, 50, 0, 0, 255, 4)
-  ren = new Sprite(854, 482, 50, 50, 255, 0, 0, 4);
+  bob = new iSprite(loadImage("Bob.png"), 100, 100, 50, "E", 4)
+  ren = new iSprite(loadImage("Ren.png"), 854, 482, 50, 50, "W", 4);
   bpn = new iSprite(loadImage("SniperWeapon.png"), bob.x, bob.y, 50, 50, "E");
   rpn = new iSprite(loadImage("SniperWeapon.png"), ren.x, ren.y, 50, 50, "W");
 }
@@ -64,8 +64,10 @@ function draw() {
     if (keyIsDown(RIGHT_ARROW)) {
       ren.x += ren.speed;
       rpn.x += ren.speed;
-      if (!rf)
+      if (!rf) {
         rpn.dir = "E";
+        ren.dir = "E";
+      }
     }  
     if (keyIsDown(UP_ARROW)) {
       ren.y -= ren.speed;
@@ -74,8 +76,10 @@ function draw() {
     if (keyIsDown(LEFT_ARROW)) {
       ren.x -= ren.speed;
       rpn.x -= ren.speed;
-      if (!rf)
+      if (!rf) {
         rpn.dir = "W";
+        ren.dir = "W";
+      }
     }  
     if (keyIsDown(DOWN_ARROW)) {
       ren.y += ren.speed;
@@ -85,8 +89,10 @@ function draw() {
     if (keyIsDown(68)) {
       bob.x += bob.speed;
       bpn.x += bob.speed;
-      if (!bf)
+      if (!bf) {
         bpn.dir = "E";
+        bob.dir = "E";
+      }
     }  
     if (keyIsDown(87)) {
       bob.y -= bob.speed;
@@ -95,8 +101,10 @@ function draw() {
     if (keyIsDown(65)) {
       bob.x -= bob.speed;
       bpn.x -= bob.speed;
-      if (!bf)
+      if (!bf) {
         bpn.dir = "W";
+        bob.dir = "W";
+      }
     }  
     if (keyIsDown(83)) {
       bob.y += bob.speed;
