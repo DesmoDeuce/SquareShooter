@@ -8,11 +8,11 @@ function button() {
   text("Play Again", 60 - 18 * 2.5, 35 + 18 / 2.5)
 }
 
-function mousePressed() {
+function mousePressed(link, link1, link2) {
   if (mouseX > 10
       && mouseX < 110
       && mouseY > 10
       && mouseY < 60) {
-    window.location.href = "https://penguinsrule521.github.io/Website/default.html";
+    window.location.href = link;
   }
 }
