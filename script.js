@@ -200,7 +200,7 @@ function draw() {
   ren.show();
   bpn.show();
   rpn.show();
-  button();
+  button("https://penguinsrule521.github.io/Website/default.html", null, null);
 }
 
 function keyPressed() {
