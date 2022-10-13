@@ -207,6 +207,9 @@ function draw() {
   ren.show();
   bpn.show();
   rpn.show();
+  button("https://penguinsrule521.github.io/Website/super.html",
+         "https://penguinsrule521.github.io/Website/default.html",
+         "https://penguinsrule521.github.io/Website/sniper.html");
 }
 
 function fire(w) {
