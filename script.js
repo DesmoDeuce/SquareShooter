@@ -23,6 +23,7 @@ function setup() {
 
 function draw() {
   background(0);
+  button();
   if (winner == "bob") {
     textSize(txtSize)
     fill(0, 0, 255)
