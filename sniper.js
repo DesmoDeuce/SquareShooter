@@ -15,14 +15,14 @@ var txtSize = 64;
 
 function setup() {
   createCanvas(sL, sW);
-  bob = new iSprite(loadImage("Bob.png"), 100, 100, 50, "E", 4)
-  ren = new iSprite(loadImage("Ren.png"), 854, 482, 50, 50, "W", 4);
-  bpn = new iSprite(loadImage("SniperWeapon.png"), bob.x, bob.y, 50, 50, "E");
-  rpn = new iSprite(loadImage("SniperWeapon.png"), ren.x, ren.y, 50, 50, "W");
+  bob = new Sprite(100, 100, 50, 50, 0, 0, 255, 4)
+  ren = new Sprite(854, 482, 50, 50, 255, 0, 0, 4);
+  bpn = new iSprite(loadImage("Rose.png"), bob.x, bob.y, 50, 50, "E");
+  rpn = new iSprite(loadImage("Rose.png"), ren.x, ren.y, 50, 50, "W");
 }
 
 function draw() {
-  background(220);
+  background(0);
   if (winner == "bob") {
     textSize(txtSize)
     fill(0, 0, 255)
@@ -41,11 +41,8 @@ function draw() {
     bob.b = 170;
   if (bL == 1)
     bob.b = 85;
-  if (bL == 0) {
-    bob.b = 220;
-    bob.r = 220;
-    bob.g = 220;
-  }
+  if (bL == 0)
+    bob.b = 0;
 
   if (rL == 3)
     ren.r = 255;
@@ -53,21 +50,15 @@ function draw() {
     ren.r = 170;
   if (rL == 1)
     ren.r = 85;
-  if (rL == 0) {
-    ren.b = 220;
-    ren.r = 220;
-    ren.g = 220;
-  }
-  
+  if (rL == 0)
+    ren.r = 0;
   if (running) {
     
     if (keyIsDown(RIGHT_ARROW)) {
       ren.x += ren.speed;
       rpn.x += ren.speed;
-      if (!rf) {
+      if (!rf)
         rpn.dir = "E";
-        ren.dir = "E";
-      }
     }  
     if (keyIsDown(UP_ARROW)) {
       ren.y -= ren.speed;
@@ -76,10 +67,8 @@ function draw() {
     if (keyIsDown(LEFT_ARROW)) {
       ren.x -= ren.speed;
       rpn.x -= ren.speed;
-      if (!rf) {
+      if (!rf)
         rpn.dir = "W";
-        ren.dir = "W";
-      }
     }  
     if (keyIsDown(DOWN_ARROW)) {
       ren.y += ren.speed;
@@ -89,10 +78,8 @@ function draw() {
     if (keyIsDown(68)) {
       bob.x += bob.speed;
       bpn.x += bob.speed;
-      if (!bf) {
+      if (!bf)
         bpn.dir = "E";
-        bob.dir = "E";
-      }
     }  
     if (keyIsDown(87)) {
       bob.y -= bob.speed;
@@ -101,10 +88,8 @@ function draw() {
     if (keyIsDown(65)) {
       bob.x -= bob.speed;
       bpn.x -= bob.speed;
-      if (!bf) {
+      if (!bf)
         bpn.dir = "W";
-        bob.dir = "W";
-      }
     }  
     if (keyIsDown(83)) {
       bob.y += bob.speed;
