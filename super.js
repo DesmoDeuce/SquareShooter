@@ -210,6 +210,27 @@ function draw() {
   button("Default Royale", "Sniper Royale");
 }
 
+function mousePressed() {
+  if (mouseX > 10
+      && mouseX < 110
+      && mouseY > 10
+      && mouseY < 60) {
+    window.location.href = "https://penguinsrule521.github.io/Website/super.html";
+  }
+  if (mouseX > 120
+      && mouseX < 220
+      && mouseY > 10
+      && mouseY < 60) {
+    window.location.href = "https://penguinsrule521.github.io/Website/default.html";
+  }
+  if (mouseX > 230
+      && mouseX < 330
+      && mouseY > 10
+      && mouseY < 60) {
+    window.location.href = "https://penguinsrule521.github.io/Website/sniper.html";
+  }
+}
+
 function fire(w) {
   var po;
   if (w.dir == "E") {
