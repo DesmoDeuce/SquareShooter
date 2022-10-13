@@ -17,8 +17,8 @@ function setup() {
   createCanvas(sL, sW);
   bob = new iSprite(loadImage("Bob.png"), 100, 100, 50, "E", 4)
   ren = new iSprite(loadImage("Ren.png"), 854, 482, 50, 50, "W", 4);
-  bpn = new iSprite(loadImage("Weapon.png"), bob.x, bob.y, 50, 50, "E", null);
-  rpn = new iSprite(loadImage("Weapon.png"), ren.x, ren.y, 50, 50, "W", null);
+  bpn = new iSprite(loadImage("Weapon.png"), bob.x, bob.y, 50, 50, "E");
+  rpn = new iSprite(loadImage("Weapon.png"), ren.x, ren.y, 50, 50, "W");
 }
 
 function draw() {
