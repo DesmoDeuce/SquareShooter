@@ -200,9 +200,7 @@ function draw() {
   ren.show();
   bpn.show();
   rpn.show();
-  button("https://penguinsrule521.github.io/Website/sniper.html",
-         "https://penguinsrule521.github.io/Website/default.html",
-         "https://penguinsrule521.github.io/Website/super.html");
+  button("Default Royale", "Super Royale");
 }
 
 function keyPressed() {
