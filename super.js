@@ -211,7 +211,7 @@ function draw() {
   if (dropped) {
     fill(255);
     square(10, 10, 25);
-    button("Default Royale", "Super Royale");
+    button("Default Royale", "Sniper Royale");
   } else {
     fill(255);
     square(10, 10, 25);
