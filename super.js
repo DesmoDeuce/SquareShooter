@@ -112,7 +112,7 @@ function draw() {
   
       if (bPotatos[n].x + bPotatos[n].width >= ren.x && bPotatos[n].x + bPotatos[n].width <= ren.x + ren.width)
         if (bPotatos[n].y + bPotatos[n].length >= ren.y && bPotatos[n].y + bPotatos[n].length <= ren.y + ren.length) {
-          rL -= 3;
+          rL--;
           bPotatos[n].y = -50
           if (rL < 1) {
             winner = "bob";
@@ -134,7 +134,7 @@ function draw() {
   
       if (rPotatos[n].x + rPotatos[n].width >= bob.x && rPotatos[n].x + rPotatos[n].width <= bob.x + bob.width)
         if (rPotatos[n].y + rPotatos[n].length >= bob.y && rPotatos[n].y + rPotatos[n].length <= bob.y + bob.length) {
-          bL -= 3;
+          bL--;
           rPotatos[n].y = -50;
           if (bL < 1) {
             winner = "ren";
