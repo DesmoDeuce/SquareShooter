@@ -213,23 +213,33 @@ function keyPressed() {
 }
 
 function mousePressed() {
-  if (mouseX > 10
-      && mouseX < 110
-      && mouseY > 10
-      && mouseY < 60) {
+  if (mouseX > 45
+      && mouseX < 145
+      && mouseY > 45
+      && mouseY < 95) {
     window.location.href = "https://penguinsrule521.github.io/Website/sniper.html";
   }
-  if (mouseX > 120
-      && mouseX < 220
-      && mouseY > 10
-      && mouseY < 60) {
+  if (mouseX > 155
+      && mouseX < 255
+      && mouseY > 45
+      && mouseY < 95) {
     window.location.href = "https://penguinsrule521.github.io/Website/default.html";
   }
-  if (mouseX > 230
-      && mouseX < 330
-      && mouseY > 10
-      && mouseY < 60) {
+  if (mouseX > 265
+      && mouseX < 365
+      && mouseY > 45
+      && mouseY < 95) {
     window.location.href = "https://penguinsrule521.github.io/Website/super.html";
+  }
+  if (mouseX > 10
+      && mouseX < 35
+      && mouseY > 10
+      && mouseY < 35) {
+    if (dropped) {
+      dropped = false;
+    } else {
+      dropped = true;
+    }
   }
 }
 
