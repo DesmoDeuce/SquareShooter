@@ -12,6 +12,7 @@ var winner = null;
 var bf = false;
 var rf = false;
 var txtSize = 64;
+var dropped = false;
 
 function setup() {
   createCanvas(sL, sW);
