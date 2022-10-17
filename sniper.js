@@ -220,6 +220,7 @@ function keyPressed() {
 }
 
 function mousePressed() {
+  if (dropped) {
   if (mouseX > 45
       && mouseX < 145
       && mouseY > 10
@@ -237,6 +238,7 @@ function mousePressed() {
       && mouseY > 10
       && mouseY < 60) {
     window.location.href = "https://penguinsrule521.github.io/Website/super.html";
+  }
   }
   if (mouseX > 10
       && mouseX < 35
