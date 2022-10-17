@@ -12,6 +12,7 @@ var winner = null;
 var bf = false;
 var rf = false;
 var txtSize = 64;
+var dropped = false;
 
 function setup() {
   createCanvas(sL, sW);
@@ -200,7 +201,14 @@ function draw() {
   ren.show();
   bpn.show();
   rpn.show();
-  button("Sniper Royale", "Super Royale");
+  if (dropped) {
+    fill(255);
+    square(10, 10, 25);
+    button("Sniper Royale", "Super Royale");
+  } else {
+    fill(255);
+    square(10, 10, 25);
+  }
 }
 
 function keyPressed() {
