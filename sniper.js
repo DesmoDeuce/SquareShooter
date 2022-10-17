@@ -200,7 +200,14 @@ function draw() {
   ren.show();
   bpn.show();
   rpn.show();
-  button("Default Royale", "Super Royale");
+  if (dropped) {
+    fill(255);
+    square(10, 10, 25);
+    button("Default Royale", "Super Royale");
+  } else {
+    fill(255);
+    square(10, 10, 25);
+  }
 }
 
 function keyPressed() {
