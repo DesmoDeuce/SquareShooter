@@ -25,15 +25,17 @@ function setup() {
 function draw() {
   background(0);
   if (winner == "bob") {
-    textSize(txtSize)
-    fill(0, 0, 255)
-    text("BLUE WINS!", sL / 2 - txtSize * 3, sW  / 2)
+    textSize(txtSize);
+    fill(0, 0, 255);
+    text("BLUE WINS!", sL / 2 - txtSize * 3, sW  / 2);
+    dropped = true;
   }
 
   if (winner == "ren") {
-    textSize(txtSize)
-    fill(255, 0, 0)
-    text("RED WINS!", sL / 2 - txtSize * 3, sW / 2)
+    textSize(txtSize);
+    fill(255, 0, 0);
+    text("RED WINS!", sL / 2 - txtSize * 3, sW / 2);
+    dropped = true;
   }
   if (winner == "ren")
   if (bL == 3)
