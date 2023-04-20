@@ -66,24 +66,24 @@ function draw() {
     }  
   
     if (keyIsDown(68)) {
-      bob.x += bob.speed;
-      bpn.x += bob.speed;
+      bob.x += bob.speed * 2;
+      bpn.x += bob.speed * 2;
       if (!bf)
         bpn.dir = "E";
     }  
     if (keyIsDown(87)) {
-      bob.y -= bob.speed;
-      bpn.y -= bob.speed;
+      bob.y -= bob.speed * 2;
+      bpn.y -= bob.speed * 2;
     }  
     if (keyIsDown(65)) {
-      bob.x -= bob.speed;
-      bpn.x -= bob.speed;
+      bob.x -= bob.speed * 2;
+      bpn.x -= bob.speed * 2;
       if (!bf)
         bpn.dir = "W";
     }  
     if (keyIsDown(83)) {
-      bob.y += bob.speed;
-      bpn.y += bob.speed;
+      bob.y += bob.speed * 2;
+      bpn.y += bob.speed * 2;
     }  
     
     for (let n = 0; n < bPotatos.length; n++) {
