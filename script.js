@@ -66,24 +66,24 @@ function draw() {
     }  
   
     if (keyIsDown(68)) {
-      bob.x += bob.speed * 2;
-      bpn.x += bob.speed * 2;
+      bob.x += bob.speed;
+      bpn.x += bob.speed;
       if (!bf)
         bpn.dir = "E";
     }  
     if (keyIsDown(87)) {
-      bob.y -= bob.speed * 2;
-      bpn.y -= bob.speed * 2;
+      bob.y -= bob.speed;
+      bpn.y -= bob.speed;
     }  
     if (keyIsDown(65)) {
-      bob.x -= bob.speed * 2;
-      bpn.x -= bob.speed * 2;
+      bob.x -= bob.speed;
+      bpn.x -= bob.speed;
       if (!bf)
         bpn.dir = "W";
     }  
     if (keyIsDown(83)) {
-      bob.y += bob.speed * 2;
-      bpn.y += bob.speed * 2;
+      bob.y += bob.speed;
+      bpn.y += bob.speed;
     }  
     
     for (let n = 0; n < bPotatos.length; n++) {
@@ -228,19 +228,19 @@ function mousePressed() {
         && mouseX < 170
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/Website/default.html";
+      window.location.href = "https://penguinsrule521.github.io/SquareShooter/default.html";
     }
     if (mouseX > 180
         && mouseX < 305
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/Website/sniper.html";
+      window.location.href = "https://penguinsrule521.github.io/SquareShooter/sniper.html";
     }
     if (mouseX > 315
         && mouseX < 440
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/Website/super.html";
+      window.location.href = "https://penguinsrule521.github.io/SquareShooter/super.html";
     }
   }
   if (mouseX > 10
