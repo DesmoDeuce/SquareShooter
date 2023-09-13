@@ -214,10 +214,10 @@ function draw() {
 }
 
 function keyPressed() {
-  if(keyCode == 18)
+  if(keyCode == 16)
     if (!rf)
       fire(rpn);
-  if(keyCode == 70)
+  if(keyCode == 69)
     if (!bf)
       fire(bpn);
 }
