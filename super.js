@@ -86,10 +86,10 @@ function draw() {
       bpn.y += bob.speed;
     }  
     
-    if (keyIsDown(18))
+    if (keyIsDown(16))
       if (!rf)
         fire(rpn)
-    if (keyIsDown(70))
+    if (keyIsDown(69))
       if (!bf)
         fire(bpn)
     
