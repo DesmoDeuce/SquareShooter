@@ -1,5 +1,5 @@
 var sL = 988;
-var sW = 630;
+var sW = 580;
 var bL = 3;
 var rL = 3;
 var rup = true;
