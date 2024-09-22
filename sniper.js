@@ -228,19 +228,19 @@ function mousePressed() {
         && mouseX < 170
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/SquareShooter/sniper.html";
+      window.location.href = "https://desmodeuce.github.io/SquareShooter/sniper.html";
     }
     if (mouseX > 180
         && mouseX < 305
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/SquareShooter/default.html";
+      window.location.href = "https://desmodeuce.github.io/SquareShooter/default.html";
     }
     if (mouseX > 315
         && mouseX < 440
         && mouseY > 10
         && mouseY < 60) {
-      window.location.href = "https://penguinsrule521.github.io/SquareShooter/super.html";
+      window.location.href = "https://desmodeuce.github.io/SquareShooter/super.html";
     }
   }
   if (mouseX > 10
